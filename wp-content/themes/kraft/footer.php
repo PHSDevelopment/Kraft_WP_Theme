@@ -10,17 +10,28 @@
  */
 
 ?>
+</div><!-- #content -->
+<div id="footer">
+    <div class="footer-wrapper">
+    	<?php wp_nav_menu( array( 'theme_location' => 'footer', 'menu_id' => 'footer-menu' ) ); ?>
+        <ul>
+        <div class="footer-image">
+            <a href="http://www.partners.org"><img src="<?php print get_template_directory_uri(); ?>/images/footer-logo.png" alt="Partners" /></a>
+        </div>
+    </div>
+</div>
 
-	</div><!-- #content -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-7114508-3']);
+_gaq.push(['_trackPageview']);
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'kraft' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'kraft' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'kraft' ), 'kraft', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+(function () {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
 
 <?php wp_footer(); ?>
 

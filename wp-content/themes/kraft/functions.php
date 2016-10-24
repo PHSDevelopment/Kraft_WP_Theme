@@ -46,6 +46,7 @@ function kraft_setup() {
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'kraft' ),
 		'secondary' => esc_html__( 'Secondary', 'kraft' ),
+		'footer' => esc_html__( 'Footer', 'kraft' ),
 	) );
 
 	/*

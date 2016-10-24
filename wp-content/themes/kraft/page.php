@@ -15,12 +15,14 @@
 get_header(); ?>
 
 	<div class="sidebar-left">
-        <ul class="menu"></ul>
+		<?php get_sidebar('sidebar-1'); ?>
     </div>
 
-    <div class="banner">
-        <img src="Assets/images/Support-2.jpg" />
-    </div>
+    <?php if(has_post_thumbnail()) : ?>
+	    <div class="banner">
+	        <?php the_post_thumbnail( 'full' ); ?>
+	    </div>
+	<?php endif; ?>
 
 	<div class="content-body">
         <div class="content-body-left" role="main">

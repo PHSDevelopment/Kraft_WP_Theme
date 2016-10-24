@@ -15,33 +15,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 kraft is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
+.skip-link {
+	display: none;
+}
 
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-	## Posts and pages
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
---------------------------------------------------------------*/
 
 a, img{
 	border: 0;
@@ -260,6 +238,7 @@ body{
 	margin-left: 50px;
 	height: 100%;
 	margin-right:20px;
+	min-height: 1px;
 }
 
 .sidebar-left ul{
@@ -445,8 +424,8 @@ ul.our-impact-sub li.empty
 	padding-left: 290px;
 }
 
-.content-body .content-body-left span, 
-.content-body .content-body-left-full span, 
+.content-body .content-body-left, 
+.content-body .content-body-left-full, 
 .content-body .content-body-left-full table tbody tr td,
 .content-body .content-body-left-full table tbody tr td select{
 	font-family: 'Open Sans',sans-serif;
@@ -454,7 +433,7 @@ ul.our-impact-sub li.empty
     line-height: 22px;    
 }
 
-.content-body .content-body-left-full span {
+.content-body .content-body-left-full {
 	width:20px;
 }
 
@@ -473,7 +452,8 @@ ul.our-impact-sub li.empty
  	width: 316px;
  }
 
-.content-body .content-body-left .content-body-left-lead span, .content-body .content-body-left-full .content-body-left-lead span{
+.content-body .content-body-left .content-body-left-lead, 
+.content-body .content-body-left-full .content-body-left-lead {
 	font-family: 'Open Sans',sans-serif;
     font-size: 16px;
     line-height: 26px;
@@ -485,7 +465,10 @@ ul.our-impact-sub li.empty
 	font-family: OpenSans, sans-Serif;
 }
 
-a.find-out-more:hover, a.learn-more:hover, .content-body .content-body-left-full span a.read-more:hover,
+a.find-out-more:hover, 
+a.learn-more:hover, 
+.content-body 
+.content-body-left-full a.read-more:hover,
 a.read-more:hover
 {
 	color: #186081;
@@ -697,10 +680,12 @@ a.learn-more{
 	color: #c1e5f6;
 }
 
-#footer ul li.not-first a{
+#footer ul li a{
 	border-left: #296786 1px solid;
 }
-
+#footer ul li:first-child a {
+	border-left: none;
+}
 #footer .footer-image{
 	float: right;
 	margin-top: -15px;
