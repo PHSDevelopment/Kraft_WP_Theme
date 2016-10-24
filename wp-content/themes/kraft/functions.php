@@ -111,7 +111,7 @@ function kraft_scripts() {
 	wp_enqueue_style( 'kraft-pretty-photo', get_template_directory_uri() . '/css/prettyPhoto.css' );
 	wp_enqueue_script( 'kraft-pretty-photo-js', get_template_directory_uri() . '/js/jquery.prettyPhoto.js', array(), '20151215', true );
 
-	wp_enqueue_style( 'kraft-utsav', get_template_directory_uri() . '/css/utsav-main.css' );
+	/*wp_enqueue_style( 'kraft-utsav', get_template_directory_uri() . '/css/utsav-main.css' );*/
 
 	wp_enqueue_script( 'kraft-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
